@@ -1,0 +1,26 @@
+startshape mix
+rule mix { 
+	FOURPIXELS { }
+	mix {x 5 flip 90 r 45 s 0.95}
+}
+
+rule mix { 
+	FOURPIXELS { }
+	mix {x 5 flip 45 r 45 s 0.95}
+}
+
+
+rule FOURPIXELS  {
+	PRIMITIVE { x 0 }
+	PRIMITIVE { x 1 }
+	PRIMITIVE { y 1 }
+	PRIMITIVE { x 1 y 1 }
+}
+
+rule PRIMITIVE {
+	SQUARE {}
+}
+
+rule PRIMITIVE {
+	CIRCLE {}
+}

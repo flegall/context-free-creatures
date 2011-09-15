@@ -1,0 +1,57 @@
+startshape begin
+
+rule begin {
+	trunk { s 2 r -270}
+	trunk { r 39}
+	trunk { r 176}
+	trunk { r -110}
+}
+
+rule trunk {
+	trunk {y +4 r 15 s 0.9}
+	circle {}
+}
+
+rule trunk {
+	trunk {y +4 r -9  s 0.9}
+	circle {}
+}
+
+rule trunk 0.1 {
+	trunk {x +4 r 77  s 0.9}
+	trunk {y +4 s 0.9}
+	circle {}
+}
+
+
+rule trunk 0.02 {
+	circle { s 15}
+}
+
+rule trunk 0.1 {
+	trunk { r -270}
+	trunk { r 39}
+	trunk { r 176}
+	trunk { r -110}
+}
+
+rule trunk {
+	trunk { flip 45}
+}
+
+
+
+rule circle {
+	9 * {r 40 x 1} central {r -20}
+}
+
+rule central {
+	35 * {s 0.91 r 0.7 y +0.12} PRIMITIVE {}
+}
+
+// its primitive colors
+rule PRIMITIVE {
+	CIRCLE {hue 10 b 1.0 sat 1.0}}
+rule PRIMITIVE {
+	CIRCLE {hue 45 b 1.0 sat 1.0}
+}

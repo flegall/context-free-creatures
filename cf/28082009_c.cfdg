@@ -1,0 +1,26 @@
+startshape begin
+
+rule begin {
+	circle {}
+}
+
+rule circle {
+	9 * {r 40 x 1} central {r -20}
+}
+
+rule central {
+	100 * {s 0.91 r 0.7 y +0.12} PRIMITIVE {}
+}
+
+// a star pattern
+rule star {
+	PRIMITIVE {}
+	star {x 1.16 r 40.2 s 0.99}
+}
+
+// its primitive colors
+rule PRIMITIVE {
+	CIRCLE {hue 10 b 1.0 sat 1.0}}
+rule PRIMITIVE {
+	CIRCLE {hue 45 b 1.0 sat 1.0}
+}

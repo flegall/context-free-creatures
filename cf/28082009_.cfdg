@@ -1,0 +1,14 @@
+startshape begin
+
+rule begin {
+	star {}
+}
+
+rule star {
+	PRIMITIVE {}
+	star {x 1.02 r 40 s 0.99}
+}
+
+rule PRIMITIVE {
+	CIRCLE {}
+}

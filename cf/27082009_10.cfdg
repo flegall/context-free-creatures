@@ -1,0 +1,48 @@
+startshape begin
+
+rule begin {
+	mix { hue 17 sat 1.0 b 1.0 }
+}
+
+rule mix{
+	FOURPIXELS {}
+	mix {x + 3  s 0.97 r 45}
+}
+
+
+rule mix{
+	FOURPIXELS {}
+	mix {flip 90 x + 3 s 0.99 r 60}
+}
+
+rule FOURPIXELS  {
+	RENDER { x 0 }
+	RENDER { x 1 }
+	RENDER { y 1 }
+	RENDER { x 1 y 1 }
+}
+
+rule RENDER {
+	PRIMITIVE { hue 26 }
+}
+
+rule RENDER {
+	PRIMITIVE { hue 70 }
+}
+
+rule RENDER {
+	PRIMITIVE { hue 46 }
+}
+
+rule RENDER {
+	PRIMITIVE { hue 0 }
+}
+
+
+rule PRIMITIVE {
+	SQUARE {}
+}
+
+rule PRIMITIVE {
+	CIRCLE {}
+}

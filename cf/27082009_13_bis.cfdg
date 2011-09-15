@@ -1,0 +1,57 @@
+startshape begin
+
+rule begin {
+	flowah {}
+	flowah {y + 20 flip 90}
+}
+
+rule flowah {
+	flowah {r 60 y +10 s 0.7}
+	flowah {flip 10 y +20 s 0.5}
+}
+
+rule flowah {
+	flowah {flip 90 x +10 s 0.7}
+	flowah {r 90 y +10 s 0.7}
+	flowah {r 180 y +20 s 0.9}
+}
+
+rule flowah {
+	arc {}
+	multiArc { s 0.4}
+}
+
+
+rule multiArc {
+	arc {}
+	arc { r 20}
+	arc { r 40}
+	arc { r 60}
+	arc { r 80}
+	arc { r 100}
+	arc { r 120}
+	arc { r 140}
+	arc { r 160}
+	arc { r 185}
+	arc { r 200}
+	arc { r 220}
+	arc { r 240}
+	arc { r 260}
+	arc { r 280}
+	arc { r 300}
+	arc { r 330}
+
+}
+
+rule arc {
+	arcImpl {x +18.6 y -8.5}
+}
+
+rule arcImpl {
+	PRIMITIVE {}
+	arcImpl {y+0.5 r 1.3 s 0.99}	
+}
+
+rule PRIMITIVE {
+	SQUARE {}
+}

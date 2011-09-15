@@ -1,0 +1,19 @@
+startshape begin
+
+rule begin {
+	star {}
+
+}
+
+// a star pattern
+rule star {
+	PRIMITIVE {}
+	star {x 1.02 r 40 s 0.99}
+}
+
+// its primitive colors
+rule PRIMITIVE {
+	CIRCLE {hue 10 b 1.0 sat 1.0}}
+rule PRIMITIVE {
+	CIRCLE {hue 40 b 1.0 sat 1.0}
+}

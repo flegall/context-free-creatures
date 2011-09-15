@@ -1,0 +1,31 @@
+startshape begin
+
+rule begin {
+	mix { }
+}
+
+rule mix{
+	FOURPIXELS {}
+	mix {x + 8 s 0.99 r 45}
+}
+
+
+rule mix{
+	FOURPIXELS {}
+	mix {flip 90 x + 8 s 0.9 r 45}
+}
+
+rule FOURPIXELS  {
+	PRIMITIVE { x 0 }
+	PRIMITIVE { x 1 }
+	PRIMITIVE { y 1 }
+	PRIMITIVE { x 1 y 1 }
+}
+
+rule PRIMITIVE {
+	SQUARE {}
+}
+
+rule PRIMITIVE {
+	CIRCLE {}
+}
